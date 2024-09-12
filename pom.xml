@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.winmanboo</groupId>
+    <artifactId>space-im</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>space-im</name>
+    <modules>
+        <module>business-api</module>
+        <module>im-server</module>
+        <module>im-data</module>
+        <module>im-router</module>
+        <module>im-offline</module>
+        <module>im-offline/im-offline-core</module>
+        <module>im-offline/im-offline-api</module>
+        <module>im-common-api</module>
+        <module>im-gateway</module>
+        <module>im-starter</module>
+        <module>im-starter/im-starter-redis</module>
+        <module>im-test</module>
+        <module>im-test/im-test-websocket</module>
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <mysql.version>8.0.33</mysql.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springboot.version>3.0.2</springboot.version>
+        <mybatis.plus.version>3.5.5</mybatis.plus.version>
+        <dubbo.version>3.2.14</dubbo.version>
+        <dubbo.protobuf.serialization.version>2.7.23</dubbo.protobuf.serialization.version>
+        <rocketmq.version>4.9.4</rocketmq.version>
+        <protobuf.version>4.27.2</protobuf.version>
+        <protobuf.nano.version>3.1.0</protobuf.nano.version>
+        <guava.version>33.2.1-jre</guava.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>3.0.0</version>
+        <relativePath/>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2022.0.0.0-RC1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2022.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

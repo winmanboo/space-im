@@ -1,0 +1,35 @@
+#spring:
+#  application:
+#    name: im-router-core
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+#      lettuce:
+#        pool:
+#          min-idle: 10
+#          max-active: 50
+#          max-idle: 20
+#      password: wzm123
+#
+#dubbo:
+#  application:
+#    name: ${spring.application.name}
+#  registry:
+#    address: nacos://localhost:8848
+#    username: nacos
+#    password: nacos
+#  protocol:
+#    name: dubbo
+#    port: 9201
+#
+#space:
+#  mq:
+#    name-server: localhost:9876
+#    producer:
+#      enable: true
+#      group: ${spring.application.name}
+#      send-msg-timeout: 3000
+#      retry-times-when-send-failed: 2
+#      retry-times-when-send-async-failed: 2
+#      retry-another-broker-when-not-store-ok: true

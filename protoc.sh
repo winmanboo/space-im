@@ -1,0 +1,1 @@
+protoc --proto_path=. --java_out=./im-server/im-server-core/src/main/java/ ./im-server/im-server-core/src/main/java/com/winmanboo/space/im/server/core/codec/protocol/pack/ack/confirm_ack.proto

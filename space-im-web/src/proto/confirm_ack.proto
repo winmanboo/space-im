@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package com.winmanboo.space.im.core.codec.protocol.pack.ack;
+
+option java_multiple_files = true;
+
+option java_package = "com.winmanboo.space.im.server.core.codec.protocol.pack.ack";
+
+option java_outer_classname = "ConfirmAckProto";
+
+message ConfirmAck {
+
+  int32 ack = 1;
+
+  // 消息 id（唯一）
+  string messageId = 2;
+
+  // 状态标志，0-失败,1-成功
+  int32 resultCode = 3;
+
+  MessagePack data = 4;
+
+  enum ResultCode {
+
+    FAIL = 0;
+
+    OK = 1;
+  }
+
+  enum Ack {
+
+    ACK = 0;
+
+    SYNC = 1;
+
+    MESSAGE = 2;
+
+    FRIEND_APPLY = 4;
+
+    SYSTEM_NOTIFY = 5;
+
+    GROUP_APPLY = 6;
+  }
+}
+
+message MessagePack {
+
+  string userId = 1;
+
+  string toId = 2;
+
+  string msgId = 3;
+
+  int32 msgType = 4;
+
+  string data = 5;
+}

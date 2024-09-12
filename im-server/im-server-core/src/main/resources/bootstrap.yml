@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: im-server-core
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      server-addr: localhost:8848
+      config:
+        import-check:
+          enabled: false
+        file-extension: yaml
+        extension-configs:
+          - data-id: im-server-core.yaml
+            group: DEFAULT_GROUP
+            refresh: true

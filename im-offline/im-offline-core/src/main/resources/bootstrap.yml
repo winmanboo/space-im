@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: im-offline-core
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      server-addr: 127.0.0.1:8848
+      config:
+        import-check:
+          enabled: false
+        file-extension: yaml
+        extension-configs:
+          - data-id: im-offline-core.yaml
+            group: DEFAULT_GROUP
+            refresh: true

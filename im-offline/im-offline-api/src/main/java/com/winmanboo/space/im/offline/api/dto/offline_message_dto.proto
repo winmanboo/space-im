@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package com.winmanboo.space.im.offline.api.dto;
+
+option java_multiple_files = true;
+
+option java_package = "com.winmanboo.space.im.offline.api.dto";
+
+option java_outer_classname = "OfflineMessageProto";
+
+message OfflineMessageDTO {
+
+  repeated OfflineMessage offlineMessageList = 1;
+
+  message OfflineMessage {
+
+    string userId = 1;
+
+    int32 appId = 2;
+
+    string toId = 3;
+
+    string msgId = 4;
+
+    int32 logicId = 5;
+
+    int32 msgType = 6;
+
+    bytes data = 7;
+
+    // 同步标志位
+    bool synced = 8;
+  }
+}

@@ -1,0 +1,20 @@
+#spring:
+#  application:
+#    name: im-offline-core
+#  data:
+#    mongodb:
+#      host: localhost
+#      port: 27017
+#      database: db_offline_message
+#
+#dubbo:
+#  application:
+#    name: ${spring.application.name}
+#    qos-enable: false
+#  registry:
+#    address: nacos://localhost:8848
+#    username: nacos
+#    password: nacos
+#  protocol:
+#    name: dubbo
+#    port: 9301
